@@ -65,6 +65,20 @@
         </style>
     </head>
     <body>
+        
+        <div class="container">
+            @include('commons.error_messages')
+            
+            @yield('content')
+        </div>
+        
+        <div class="center jumbotron">
+        <div class="text-center">
+            <h1>Welcome to the Microposts</h1>
+            {!! link_to_route('signup.get', '新規登録', [], ['class' => 'btn btn-lg btn-primary']) !!}
+        </div>
+    </div>
+        
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
